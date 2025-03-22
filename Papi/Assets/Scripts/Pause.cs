@@ -30,9 +30,10 @@ public class Pause : MonoBehaviour
 
     public void PauseGame()
     {
-        SFX.Play();
+        
         if (isPaused)
         {
+            SFX.Play();
             Time.timeScale=1;
             Pausemenu.SetActive(false);
         }
@@ -40,6 +41,7 @@ public class Pause : MonoBehaviour
         {
             Time.timeScale=0;
             Pausemenu.SetActive(true);
+            SFX.Play();
         }
         isPaused=!isPaused;
     }
