@@ -5,10 +5,10 @@ using UnityEngine;
 public class WeaponScript : MonoBehaviour
 {
     enum Element{
-        Fire,
-        Water,
-        Lightning,
-        Nature
+        fire,
+        water,
+        lightning,
+        nature
     }
 	[SerializeField] private Sprite LightningPlayer;
 	[SerializeField] private Sprite FirePlayer;
@@ -30,16 +30,16 @@ public class WeaponScript : MonoBehaviour
     }
 
     private void UpdateSprite(){
-        if(myElement == Fire){
+        if(myElement == fire){
             spriteRenderer.Sprite = FirePlayer;
         }
-        if(myElement == Lightning){
+        if(myElement == lightning){
             spriteRenderer.Sprite = LightningPlayer;
         }
-        if(myElement == Water){
+        if(myElement == water){
             spriteRenderer.Sprite = WaterPlayer;
         }
-        if(myElement == Nature){
+        if(myElement == nature){
             spriteRenderer.Sprite = NaturePlayer;
         }
     }
@@ -53,7 +53,7 @@ public class WeaponScript : MonoBehaviour
     void Update()
     {
         if(Input.GetButtonDown("Fire1") && canShoot){
-            StarCoroutine(Shoot());
+            StartCoroutine(Shoot());
         }
     }
 }
