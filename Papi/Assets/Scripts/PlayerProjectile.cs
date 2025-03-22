@@ -18,6 +18,7 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(direction == Vector3.zero) transform.position += Time.deltaTime * speed/4 * new Vector3(1,0,0);
         transform.position += Time.deltaTime * speed * direction;
     }
     
