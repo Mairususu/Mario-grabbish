@@ -13,7 +13,6 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         MainB();
-        Mainsong.Play();
     }
     public void MainB(){
         Main.SetActive(true);
