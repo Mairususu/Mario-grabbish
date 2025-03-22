@@ -9,6 +9,7 @@ public class MoveScriptPlayer : MonoBehaviour
 	private float horizontalMovement;
 	private float verticalMovement;
 	public Vector3 velocity = Vector3.zero;
+	[SerializeField] private SpriteRenderer spriteRenderer;
 
 	void Update(){
 		if (numJoueur == 1){
@@ -18,6 +19,9 @@ public class MoveScriptPlayer : MonoBehaviour
 			horizontalMovement = Input.GetAxis("Horizontal_Player2") * moveSpeed * Time.deltaTime;
 			verticalMovement = Input.GetAxis("Vertical_Player2") * moveSpeed * Time.deltaTime;}
 
+		if (horizontalMovement > 0) spriteRenderer.flipX = true;
+		else spriteRenderer.flipX = false;
+		
 		transform.position += new Vector3(horizontalMovement, verticalMovement,0);
 	}
 }
