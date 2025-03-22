@@ -10,5 +10,6 @@ public class HPSystem : MonoBehaviour
     {
         lp.pvs -= 5;
         if(lp.pvs <= 0){lp.pvs = 0;}
+        if(lp.pvs==0){lp.GameOver();}
     }
 }
