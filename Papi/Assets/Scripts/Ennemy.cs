@@ -17,6 +17,8 @@ public class Ennemy : MonoBehaviour
     [SerializeField] public GameObject Player_2; 
     [SerializeField] public GameObject element;
     [SerializeField] public GameObject klass;
+    [SerializeField] protected int range; // Range à partir de laquelle ils n'approchent plus (grand pour archer, très faible pour melee) (à régler dans les préfabs)
+    [SerializeField] protected int hittingRange; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
 
     private bool is_choosing_cible = false; // Permet de savoir si la coroutine de choix de cible est lancé ou s'il faut la relancer
     
@@ -42,7 +44,7 @@ public class Ennemy : MonoBehaviour
         else cible = g2;
     }
 
-    private IEnumerable Coroutine_cible(GameObject p1 , GameObject p2)
+    private IEnumerator Coroutine_cible(GameObject p1 , GameObject p2)
     { 
             is_choosing_cible = true;
             cible_choose(p1 ,p2);
@@ -61,20 +63,16 @@ public class Ennemy : MonoBehaviour
 */    
     
     // Start is called before the first frame update
-    void OnSpawnPrefab(){
-    }
-
-    private void StartCoroutine(IEnumerable coroutineCible) // Aucune idée de pk je dois mettre ça mais rider me dit que sinon il connait pas la fonction startcoroutine
+    void OnSpawnPrefab()
     {
-        throw new System.NotImplementedException();
     }
-
-
+    
     // Update is called once per frame
     private void Update()
-    {
-       if (is_choosing_cible == false )
-           StartCoroutine(Coroutine_cible(Player_1 , Player_2));
+    { 
+
+        if (is_choosing_cible == false ) StartCoroutine(Coroutine_cible(Player_1 , Player_2)); //Cible
+
     }
 }
 
