@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {   public GameObject Main;
     public GameObject Options;
     public GameObject Credits;
+    public GameObject Tutorial;
     public AudioSource Mainsong;
     public AudioSource SFX;
 
@@ -21,21 +22,33 @@ public class MainMenu : MonoBehaviour
         Main.SetActive(true);
         Options.SetActive(false);
         Credits.SetActive(false);
+        Tutorial.SetActive(false);
     }
     public void CreditsB(){
         SFX.Play();
         Main.SetActive(false);
         Options.SetActive(false);
         Credits.SetActive(true);
+        Tutorial.SetActive(false);
     }
     public void OptionsB(){
         SFX.Play();
         Main.SetActive(false);
         Options.SetActive(true);
         Credits.SetActive(false);
+        Tutorial.SetActive(false);
     }
 
-    public void PlayB(){
+    public void TutoB()
+    {
+        SFX.Play();
+        Main.SetActive(false);
+        Options.SetActive(false);
+        Credits.SetActive(false);
+        Tutorial.SetActive(true);
+        
+    }
+    public void PlayNowB(){
         SFX.Play();
         Mainsong.Stop();
         SceneManager.LoadScene("Paquito");
