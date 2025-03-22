@@ -144,6 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   klass: {fileID: 0}
-  health: 0
+  health: 1
   damage: 0
   projFoudre: {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}

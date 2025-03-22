@@ -47,7 +47,9 @@ MonoBehaviour:
   player1: {fileID: 0}
   player2: {fileID: 0}
   ennemis:
-  - {fileID: 5975490799055414766, guid: cc81e7e69b38c2642b91541deed78594, type: 3}
-  - {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
+  - {fileID: 5223885969635258272, guid: 7f675830e45ec2142935eb24e046790a, type: 3}
+  - {fileID: 3497960155851101060, guid: f405ad9c206166f49bf692550ae35d3e, type: 3}
+  - {fileID: 6547180720854183975, guid: d13a59adb9d987b40b824388e6294d6c, type: 3}
+  - {fileID: 3735729160310303160, guid: 2cf6d2f8cfa4e9b46b738aace101fb09, type: 3}
   cooldown: 5
   cooldownTimer: 0.2
