@@ -32,6 +32,6 @@ public class NatureEnnemy : ElementalEnnemies
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject);
+        if (health == 0 )  Destroy(gameObject);
     }
 }

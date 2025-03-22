@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,42 +12,27 @@ public class Ennemy : MonoBehaviour
 
     [SerializeField] public double speed;
     [SerializeField] public int cadence_changement_de_cible;
-
-    [SerializeField]
-    public GameObject
-        cible; //Ne pas mettre de GO dans ce prefab, il va se remplir automatiquement en choisissant soit p1 ou p2 en fonction de leur distance à l'ennemi
-
     [SerializeField] public GameObject Player_1;
     [SerializeField] public GameObject Player_2;
+    [SerializeField] protected double range; // Range à partir de laquelle ils n'approchent plus (grand pour archer, très faible pour melee) (à régler dans les préfab
+    [SerializeField] protected double hittingRange; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
 
-    [SerializeField]
-    protected double
-        range; // Range à partir de laquelle ils n'approchent plus (grand pour archer, très faible pour melee) (à régler dans les préfabs)
+    protected bool is_choosing_cible = false; // Permet de savoir si la coroutine de choix de cible est lancé ou s'il faut la relancer
+    public GameObject cible; //Ne pas mettre de GO dans ce prefab, il va se remplir automatiquement en choisissant soit p1 ou p2 en fonction de leur distance à l'ennemi
 
-    [SerializeField]
-    protected double
-        hittingRange; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
-
-    protected bool
-        is_choosing_cible =
-            false; // Permet de savoir si la coroutine de choix de cible est lancé ou s'il faut la relancer
-
-    public Vector3
-        get_direction_to(
-            GameObject cible) // Permet d'obtenir la direction normalisé de n'importe quel Gameobject qu'on lui fournit
+    public Vector3 get_direction_to(GameObject cible) // Permet d'obtenir la direction normalisé de n'importe quel Gameobject qu'on lui fournit
     {
-        return (cible.transform.position - transform.position).normalized;
+        return (cible.transform.position - transform.parent.position).normalized;
     }
 
-    public void
-        move_to(Vector3 direction) // Bouge dans la direction (doit être normalisé) fournie, notamment le joueur cible
+    public void move_to(Vector3 direction) // Bouge dans la direction (doit être normalisé) fournie, notamment le joueur cible
     {
-        transform.position += direction * (float)(Time.deltaTime * speed);
+        transform.parent.position += direction * (float)(Time.deltaTime * speed);
     }
 
     protected double get_distance_to(GameObject g1)
     {
-        return Vector3.Distance(transform.position, g1.transform.position);
+        return Vector3.Distance(transform.parent.position, g1.transform.position);
     }
 
     public void cible_choose(GameObject g1, GameObject g2)
@@ -62,5 +48,12 @@ public class Ennemy : MonoBehaviour
         cible_choose(p1, p2);
         yield return new WaitForSeconds(cadence_changement_de_cible);
         is_choosing_cible = false;
+    }
+
+    private void Awake()
+    {
+        Player_1 = MoveScriptPlayer.instanceP1.gameObject;
+        Player_2 = MoveScriptPlayer.instanceP2.gameObject;
+        
     }
 }

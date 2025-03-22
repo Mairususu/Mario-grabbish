@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 105213437979523445}
   - component: {fileID: 9066467947917511608}
   - component: {fileID: -7045735678810682209}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: WaterEnnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e04c476f0faafe458a63dd66257896b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  klass: {fileID: 0}
-  health: 1
-  damage: 0
+  klassArcher: {fileID: -6553420692131867246, guid: d7acbb288f78fe045853ae0e749ba06f, type: 3}
+  klassMelee: {fileID: 8670407096292889193, guid: fb96da908d8f81c4fa6a991e3dc50141, type: 3}
+  health: 3
+  damage: 1
   projFoudre: {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}

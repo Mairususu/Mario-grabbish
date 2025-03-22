@@ -5,15 +5,11 @@ using UnityEngine;
 public class SwordEnemy : Ennemy
 {
 
-    private void attack() // Pas encore implémenter le système de degats et d'attaquesdonc c vide c logique
+    private void attack() // Pas encore implémenté le système de degats et d'attaquesdonc c vide c logique
     {
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

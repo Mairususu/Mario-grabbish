@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3653819058032974266}
   - component: {fileID: 6234658356232776332}
   - component: {fileID: -6553420692131867246}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Archer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6e508ca54c92f464ba2c489438db39dd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,13 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb7f2f81d15b6b41b06b40f494a5f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
   speed: 5
-  damage: 1
   cadence_changement_de_cible: 3
-  cible: {fileID: 0}
   Player_1: {fileID: 0}
   Player_2: {fileID: 0}
-  range: 10
-  hittingRange: 7
+  range: 8.5
+  hittingRange: 10
+  cible: {fileID: 0}
   projectileEnnemy: {fileID: 3876132115508737588, guid: 54d83b36278a66040997f526495334f3, type: 3}

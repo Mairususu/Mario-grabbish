@@ -10,7 +10,7 @@ public class LightningEnnemy : ElementalEnnemies
         {
             case PlayerProjectile.Element.Nature:
             {
-                klass.speed *= 0;
+                health = 0;
             } break;
             case PlayerProjectile.Element.Fire:
             {
@@ -28,14 +28,17 @@ public class LightningEnnemy : ElementalEnnemies
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerProjectile p;
-        if (!other.TryGetComponent<PlayerProjectile>(out p)) return;
-        get_touched_by(p.Myelement);
-        Destroy(p.gameObject);
+        if (other.TryGetComponent<PlayerProjectile>(out p))
+        {
+            get_touched_by(p.Myelement);
+            Destroy(p.gameObject);
+            
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        Destroy(gameObject);
+        if (health == 0 )  Destroy(gameObject);
     }
 }

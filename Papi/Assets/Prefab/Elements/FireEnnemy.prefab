@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f8c693ea9e45504b9cecd27859feaea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  klass: {fileID: 0}
+  klassArcher: {fileID: -6553420692131867246, guid: d7acbb288f78fe045853ae0e749ba06f, type: 3}
+  klassMelee: {fileID: 8670407096292889193, guid: fb96da908d8f81c4fa6a991e3dc50141, type: 3}
   health: 3
   damage: 1
   projectileExplosion: {fileID: 6095187219867285726, guid: 2f1dc279d9256f04a9e64c812ece42b2, type: 3}

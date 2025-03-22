@@ -21,10 +21,10 @@ public class ArcherEnnemy : Ennemy
     // Update is called once per frame
     void Update()
     {
-        if (is_choosing_cible == false ) StartCoroutine(Coroutine_cible(Player_1 , Player_2)); //Cible
+        if (is_choosing_cible == false ) StartCoroutine(Coroutine_cible(MoveScriptPlayer.instanceP1.gameObject , MoveScriptPlayer.instanceP2.gameObject)); //Cible
         double distanceCible = get_distance_to(cible); 
         if (distanceCible > range) move_to(get_direction_to(cible));             //Movement
-        if (distanceCible > hittingRange) Shoot();      //Attack
+        //if (distanceCible > hittingRange) Shoot();      //Attack
 
     }
 }

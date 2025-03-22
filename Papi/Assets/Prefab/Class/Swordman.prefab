@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3648401379467767838}
   - component: {fileID: 3056077251132355714}
   - component: {fileID: 8670407096292889193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Swordman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 4fcd36413d66e17478be0c025def914f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   cadence_changement_de_cible: 3
-  cible: {fileID: 0}
   Player_1: {fileID: 0}
   Player_2: {fileID: 0}
   range: 0.5
   hittingRange: 1
+  cible: {fileID: 0}
