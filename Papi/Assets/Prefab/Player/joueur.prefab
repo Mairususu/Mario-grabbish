@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2600988283971525096}
   - component: {fileID: 3485201525490074610}
   - component: {fileID: 62987456531634606}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: joueur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,13 +127,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e7cfd9103e3284c87583ef539887b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal: 0
-  vertical: 0
-  direction: {x: 0, y: 0, z: 0}
+  rb: {fileID: 7151034261216899263}
   numJoueur: 2
   moveSpeed: 3
-  velocity: {x: 0, y: 0, z: 0}
+  horizontalMovement: 0
+  verticalMovement: 0
   spriteRenderer: {fileID: 5717293926522953795}
+  Hp: {fileID: 0}
 --- !u!114 &3485201525490074610
 MonoBehaviour:
   m_ObjectHideFlags: 0

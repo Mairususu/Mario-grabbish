@@ -11,12 +11,13 @@ public class HPSystem : MonoBehaviour
     private static int pvs;
     private static int pvmax=50;
     public GameObject DeathM;
+    
 
     private void Start()
     {
         pvs = pvmax;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void Coll()
     {
         pvs -= 5;
         if(pvs <= 0){pvs = 0;}
