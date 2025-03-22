@@ -133,7 +133,6 @@ MonoBehaviour:
   horizontalMovement: 0
   verticalMovement: 0
   spriteRenderer: {fileID: 5717293926522953795}
-  Hp: {fileID: 0}
 --- !u!114 &3485201525490074610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,11 +149,11 @@ MonoBehaviour:
   firePlayer: {fileID: 21300000, guid: c3ce4c0f1f8b9f34ca788e72d7290c4f, type: 3}
   waterPlayer: {fileID: 21300000, guid: befa27b311dd7c040835efab2c47450e, type: 3}
   naturePlayer: {fileID: 21300000, guid: 8ce30f8512c820d4f8c36ad7f0ef9943, type: 3}
-  myElement: 0
+  myElement: 2
   spriteRenderer: {fileID: 5717293926522953795}
   cooldown: 0
   cadence: 0
-  numPlayer: 0
+  numPlayer: 2
   projectileFeu: {fileID: 5975490799055414766, guid: cc81e7e69b38c2642b91541deed78594, type: 3}
   projectileEau: {fileID: 6138126370018872922, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
   projectileLightning: {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
