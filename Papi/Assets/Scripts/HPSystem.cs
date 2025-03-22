@@ -16,7 +16,6 @@ public class HPSystem : MonoBehaviour
     {
         pvs = pvmax;
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         pvs -= 5;
