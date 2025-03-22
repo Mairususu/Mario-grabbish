@@ -9,7 +9,7 @@ public class Ennemy : MonoBehaviour
 
 
 
-    [SerializeField] public int speed;
+    [SerializeField] public double speed;
     [SerializeField] public int cadence_changement_de_cible;
 
     [SerializeField]
@@ -41,7 +41,7 @@ public class Ennemy : MonoBehaviour
     public void
         move_to(Vector3 direction) // Bouge dans la direction (doit être normalisé) fournie, notamment le joueur cible
     {
-        transform.position += direction * (Time.deltaTime * speed);
+        transform.position += direction * (float)(Time.deltaTime * speed);
     }
 
     protected double get_distance_to(GameObject g1)
