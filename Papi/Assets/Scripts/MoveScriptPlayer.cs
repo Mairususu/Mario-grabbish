@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MoveScriptPlayer : MonoBehaviour
 {
+	public int horizontal = 0;
+	public int vertical = 0;
+	public Vector3 direction;
     public int numJoueur;
 	public float moveSpeed;
 	private float horizontalMovement;
@@ -21,6 +24,16 @@ public class MoveScriptPlayer : MonoBehaviour
 
 		if (horizontalMovement > 0) spriteRenderer.flipX = true;
 		else spriteRenderer.flipX = false;
+		
+		if(horizontalMovement > 0) horizontal = 1;
+		else if(horizontalMovement < 0) horizontal = -1;
+		else horizontal = 0;
+		
+		if(verticalMovement > 0) vertical = 1;
+		else if(verticalMovement < 0) vertical = -1;
+		else vertical = 0;
+		
+		direction = new Vector3(horizontal, vertical, 0);
 		
 		transform.position += new Vector3(horizontalMovement, verticalMovement,0);
 	}

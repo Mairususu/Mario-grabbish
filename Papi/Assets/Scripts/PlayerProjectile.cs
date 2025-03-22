@@ -17,6 +17,6 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * speed * transform.forward;
+        transform.position += Time.deltaTime * speed * new Vector3(1,0,0);
     }
 }
