@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8ce30f8512c820d4f8c36ad7f0ef9943, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7151034261216899263}
-  numJoueur: 2
+  numJoueur: 1
   moveSpeed: 3
   horizontalMovement: 0
   verticalMovement: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
   firePlayer: {fileID: 21300000, guid: c3ce4c0f1f8b9f34ca788e72d7290c4f, type: 3}
   waterPlayer: {fileID: 21300000, guid: befa27b311dd7c040835efab2c47450e, type: 3}
   naturePlayer: {fileID: 21300000, guid: 8ce30f8512c820d4f8c36ad7f0ef9943, type: 3}
-  myElement: 2
+  myElement: 1
   spriteRenderer: {fileID: 5717293926522953795}
   cooldown: 0
   cadence: 0
