@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnerBehaviour : MonoBehaviour
 {
+    [SerializeField] private float inactiveTime;
     [SerializeField] private GameObject player1;
     [SerializeField] private GameObject player2;
     [SerializeField] private GameObject[] ennemis;
@@ -26,6 +27,7 @@ public class SpawnerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (canSpawn) StartCoroutine(Spawn());
+        if (inactiveTime > 0) inactiveTime -= Time.deltaTime;
+        if (canSpawn && inactiveTime <= 0) StartCoroutine(Spawn());
     }
 }
