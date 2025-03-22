@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7151034261216899263}
   - component: {fileID: 2600988283971525096}
   - component: {fileID: 3485201525490074610}
+  - component: {fileID: 62987456531634606}
   m_Layer: 0
   m_Name: joueur
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 8ce30f8512c820d4f8c36ad7f0ef9943, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,6 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3e7cfd9103e3284c87583ef539887b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  vertical: 0
+  direction: {x: 0, y: 0, z: 0}
   numJoueur: 2
   moveSpeed: 3
   velocity: {x: 0, y: 0, z: 0}
@@ -155,3 +159,48 @@ MonoBehaviour:
   projectileEau: {fileID: 6138126370018872922, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
   projectileLightning: {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
   projectileNature: {fileID: 7879495990653131700, guid: 22f944550f8c1bb45b6a7f987b7841b6, type: 3}
+--- !u!61 &62987456531634606
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2242719214616637776}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.002840303, y: -0.010414481}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.14263822, y: 0.2739238}
+  m_EdgeRadius: 0
