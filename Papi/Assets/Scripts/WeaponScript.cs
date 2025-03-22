@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
+    private Vector3 direction;
     enum Element{
         Fire,
         Water,
@@ -16,6 +17,7 @@ public class WeaponScript : MonoBehaviour
 	[SerializeField] private Sprite naturePlayer;
     [SerializeField] private Element myElement;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    private GameObject projectile;
 
     private bool _canShoot = true;
     public float cooldown;
@@ -32,10 +34,12 @@ public class WeaponScript : MonoBehaviour
 
     private IEnumerator Shoot(){
         _canShoot = false;
-        if(myElement == Element.Fire) Instantiate(projectileFeu, transform.position, Quaternion.identity);
-        if(myElement == Element.Water) Instantiate(projectileEau, transform.position, Quaternion.identity);
-        if(myElement == Element.Lightning) Instantiate(projectileLightning, transform.position, Quaternion.identity);
-        if(myElement == Element.Nature) Instantiate(projectileNature, transform.position, Quaternion.identity);
+        if(myElement == Element.Fire) projectile = Instantiate(projectileFeu, transform.position, Quaternion.identity);
+        if(myElement == Element.Water) projectile = Instantiate(projectileEau, transform.position, Quaternion.identity);
+        if(myElement == Element.Lightning) projectile = Instantiate(projectileLightning, transform.position, Quaternion.identity);
+        if(myElement == Element.Nature) projectile = Instantiate(projectileNature, transform.position, Quaternion.identity);
+        direction = new Vector3(this.GetComponent<MoveScriptPlayer>().horizontalMovement,this.GetComponent<MoveScriptPlayer>().verticalMovement,0);
+        projectile.GetComponent<PlayerProjectile>().direction = direction;
         yield return new WaitForSeconds(cadence);
         _canShoot = true;
     }
@@ -68,7 +72,7 @@ public class WeaponScript : MonoBehaviour
     }
     
     void Start()
-    {
+    {	
         UpdateSprite();        
     }
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerProjectile : MonoBehaviour
 {
+    public Vector3 direction;
     public enum Element{
         Fire,
         Water,
@@ -17,6 +18,7 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * speed * new Vector3(1,0,0);
+        transform.position += Time.deltaTime * speed * direction;
     }
+    
 }
