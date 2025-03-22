@@ -8,18 +8,23 @@ public class Pause : MonoBehaviour
 {
     private static bool isPaused=false;
     public GameObject Pausemenu;
+    [SerializeField] 
 
     private void Start(){
         Pausemenu.SetActive(false);   
     }
-    public void Tomain(){
+    public void ToMain(){
         SceneManager.LoadScene("Bait");
     }
     public void QuitB()
     {
         Application.Quit();
     }
-    
+    private void Update()
+    {
+        if (PauseButton) PauseGame();
+    }
+
     public void PauseGame(){
         if (isPaused)
         {
