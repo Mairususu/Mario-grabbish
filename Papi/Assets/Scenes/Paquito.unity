@@ -122,24 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &400939312 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4267105759666867229, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-  m_PrefabInstance: {fileID: 11486406450213412}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &400939317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400939312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d6516d1fb88e604698f4d0b26ca6a5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Pausemenu: {fileID: 970401754}
 --- !u!1 &799532117
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,11 +214,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &970401754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2555054868574277963, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-  m_PrefabInstance: {fileID: 11486406450213412}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1355290307
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,14 +290,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 117718477338840648, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 400939312}
-    - target: {fileID: 117718477338840648, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 822742994874584322, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -341,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4804626886930539076, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -4756301217424346670, guid: eda55e70d41adaf4e96d457d6602d624, type: 2}
     - target: {fileID: 5327641149765909165, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -425,22 +398,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7068108081538057078, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068108081538057078, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 400939317}
-    - target: {fileID: 7068108081538057078, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitB
-      objectReference: {fileID: 0}
-    - target: {fileID: 7068108081538057078, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Pause, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 8532160816979377285, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -448,10 +405,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4267105759666867229, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 400939317}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

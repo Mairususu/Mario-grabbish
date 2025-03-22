@@ -8,24 +8,29 @@ public class Pause : MonoBehaviour
 {
     private static bool isPaused=false;
     public GameObject Pausemenu;
-    [SerializeField] 
+    public AudioSource SFX;
 
     private void Start(){
         Pausemenu.SetActive(false);   
     }
     public void ToMain(){
+        SFX.Play();
         SceneManager.LoadScene("Bait");
     }
     public void QuitB()
     {
+        SFX.Play();
         Application.Quit();
     }
+    
     private void Update()
     {
-        if (PauseButton) PauseGame();
+        if (Input.GetButtonDown("Pause")) PauseGame();
     }
 
-    public void PauseGame(){
+    public void PauseGame()
+    {
+        SFX.Play();
         if (isPaused)
         {
             Time.timeScale=1;
