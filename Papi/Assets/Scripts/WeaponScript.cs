@@ -18,29 +18,29 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     private bool canShoot = true;
-    public float cadance;
+    public float cadence;
     
     [SerializeField] private GameObject projectile; 
 
     private IEnumerator Shoot(){
         canShoot = false;
         Instantiate(projectile, transform.position, transform.rotation);
-        yield return new WaitForSecond(cadance); 
+        yield return new WaitForSeconds(cadence);
         canShoot = true;
     }
 
     private void UpdateSprite(){
-        if(myElement == fire){
-            spriteRenderer.Sprite = FirePlayer;
+        if(myElement == Element.fire){
+            spriteRenderer.sprite = FirePlayer;
         }
-        if(myElement == lightning){
-            spriteRenderer.Sprite = LightningPlayer;
+        if(myElement == Element.lightning){
+            spriteRenderer.sprite = LightningPlayer;
         }
-        if(myElement == water){
-            spriteRenderer.Sprite = WaterPlayer;
+        if(myElement == Element.water){
+            spriteRenderer.sprite = WaterPlayer;
         }
-        if(myElement == nature){
-            spriteRenderer.Sprite = NaturePlayer;
+        if(myElement == Element.nature){
+            spriteRenderer.sprite = NaturePlayer;
         }
     }
 

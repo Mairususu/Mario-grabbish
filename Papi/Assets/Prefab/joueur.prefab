@@ -141,5 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea9f55e83530d0499b3936e66e78a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 2971529389825666794, guid: 4223da9150adfb94098533e8b7927aa1, type: 3}
+  LightningPlayer: {fileID: 21300000, guid: f4a96aa554e2b084f88a023bb52919dd, type: 3}
+  FirePlayer: {fileID: 21300000, guid: c3ce4c0f1f8b9f34ca788e72d7290c4f, type: 3}
+  WaterPlayer: {fileID: 21300000, guid: befa27b311dd7c040835efab2c47450e, type: 3}
+  NaturePlayer: {fileID: 21300000, guid: 8ce30f8512c820d4f8c36ad7f0ef9943, type: 3}
   myElement: 0
+  spriteRenderer: {fileID: 0}
+  cadence: 0
+  projectile: {fileID: 2971529389825666794, guid: 4223da9150adfb94098533e8b7927aa1, type: 3}
