@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Debug = System.Diagnostics.Debug;
 
 
 public class Sword_hitzone : MonoBehaviour
@@ -33,8 +32,9 @@ public class Sword_hitzone : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("ntm");
         if (other.TryGetComponent<MoveScriptPlayer>(out move)) move.ProjHit();
     }
     
