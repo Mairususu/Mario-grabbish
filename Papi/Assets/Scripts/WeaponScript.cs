@@ -43,7 +43,6 @@ public class WeaponScript : MonoBehaviour
 
     private IEnumerator Shoot()
     {
-        Debug.Log("debut de shoot");
         _canShoot = false;
         shootSFX.Play();
         if (myElement == Element.Fire) projectile = Instantiate(projectileFeu, transform.position, Quaternion.identity);
@@ -61,13 +60,10 @@ public class WeaponScript : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.H) ) || (Input.GetKeyDown(KeyCode.RightArrow)) ) directionproj += new Vector3(1f , 0f , 0f);            // Ca va être un peu moche mais bon
         
         
-        
-        Debug.Log(directionproj);
         projectile.direction = directionproj;
         directionproj = Vector3.zero;
         yield return new WaitForSeconds(cadence);
         _canShoot = true;
-        Debug.Log("fin de shoot");
     }
 
     private void UpdateSprite()
