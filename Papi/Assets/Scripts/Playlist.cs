@@ -11,6 +11,11 @@ public class Playlist : MonoBehaviour
         Source.clip=clips[Random.Range(0,clips.Count)];
         Source.Play();
     }
-    
+
+    public void RandomMusic()
+    {
+        Source.clip = clips[Random.Range(0,clips.Count)];
+        Source.Play();
+    }
     
 }
