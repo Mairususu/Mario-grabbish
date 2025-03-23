@@ -11,7 +11,7 @@ public class NatureEnnemy : ElementalEnnemies
         {
             case PlayerProjectile.Element.Water:
             {
-                Instantiate(ennemyNature, transform.position + new Vector3(10.0f, 10.0f, 10.0f), Quaternion.identity);
+                Instantiate(ennemyNature, transform.position + new Vector3(1.0f, 1.0f, 1.0f), Quaternion.identity);
             } break;
             case PlayerProjectile.Element.Fire:
                 health = 0  ;
