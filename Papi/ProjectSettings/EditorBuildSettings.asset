@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bait.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/Paquito.unity
-    guid: e7100352a354cf347b2d054eaf61d4f6
   - enabled: 1
     path: Assets/Scenes/Bobinnzrd.unity
     guid: 2a112b0287b9c1242824e085ebfc9bba
