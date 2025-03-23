@@ -10,7 +10,8 @@ public class SwordEnemy : Ennemy
     {
         is_attacking = true;
         yield return new WaitForSeconds(cadence_attack);  // Ca marche mieux de laisser du temps après avoir tirer que partir juste après avoir tirer
-        EnnemyProjectile lastProj = Instantiate(projectileEnnemy, transform.position, transform.rotation);
+        Sword_hitzone lastProj = Instantiate(swordhitzone, transform.position, transform.rotation);
+        lastProj.cible = cible;
         is_attacking = false;
     }
 
@@ -22,6 +23,6 @@ public class SwordEnemy : Ennemy
         if (is_choosing_cible == false ) StartCoroutine(Coroutine_cible(MoveScriptPlayer.instanceP1.gameObject , MoveScriptPlayer.instanceP2.gameObject)); //Cible
         double distanceCible = get_distance_to(cible); 
         if (distanceCible > range) move_to(get_direction_to(cible));             //Movement
-        if (distanceCible > hittingRange && !is_attacking) StartCoroutine(Coroutine_attack());
+        if (distanceCible < hittingRange && !is_attacking) StartCoroutine(Coroutine_attack());
     }
 }

@@ -35,7 +35,6 @@ public class LightningEnnemy : ElementalEnnemies
             
         }
     }
-
     // Update is called once per frame
     void Update()
     {

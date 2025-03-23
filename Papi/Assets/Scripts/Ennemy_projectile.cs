@@ -12,4 +12,13 @@ public class EnnemyProjectile : MonoBehaviour  //Faudra rajouter le fait que ca 
     {
         transform.position += Time.deltaTime * projectileSpeed * direction;
     }
+    
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(gameObject);
+    }
+
 }
+
+

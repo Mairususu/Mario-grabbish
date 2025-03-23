@@ -18,7 +18,7 @@ public class Ennemy : MonoBehaviour
     [SerializeField] protected double range; // Range à partir de laquelle ils n'approchent plus (grand pour archer, très faible pour melee) (à régler dans les préfab
     [SerializeField] protected double hittingRange; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
     [SerializeField] public EnnemyProjectile projectileEnnemy; //Ca sert que pour l'archer mais le mettre que dans la classe fille me fait bien chier '
-
+    [SerializeField] public Sword_hitzone swordhitzone; // idem que pour melee mais chiant si en dessous
     
     
     protected bool is_choosing_cible = false; // Permet de savoir si la coroutine de choix de cible est lancé ou s'il faut la relancer

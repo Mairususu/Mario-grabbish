@@ -99,10 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   cadence_changement_de_cible: 0.5
-  cadence_attack: 0
+  cadence_attack: 1.5
   Player_1: {fileID: 0}
   Player_2: {fileID: 0}
-  range: 0.5
-  hittingRange: 1
+  range: 1.5
+  hittingRange: 2
   projectileEnnemy: {fileID: 0}
-  cible: {fileID: 0}
+  swordhitzone: {fileID: 5210181198630371836, guid: 46bf38d86dc9c884587308c25b19ae9a, type: 3}
+  cible: {fileID: 2727739423244579110, guid: 46bf38d86dc9c884587308c25b19ae9a, type: 3}

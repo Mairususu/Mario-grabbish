@@ -11,7 +11,7 @@ public class ArcherEnnemy : Ennemy
     [SerializeField] protected float projectile_speed; // Ptdr je comptais pas du tout taper ça, mais c'est pas con de serialize ca xD
     [SerializeField] protected float temps_cast; // faible temps où l'ennemi s'arrête pour tirer
 
-    protected bool is_shooting; // Permet de savoir si la coroutine de shoot a commence, pour pas spam
+    protected bool is_shooting; // Permet de savoir si la coroutine de shoot a commencé, pour pas spam
     protected bool is_casting; // Permet de savoir quand pour le joueur se prépare à tirer, en gros s'il cast il arrête de marcher
     
     private IEnumerator Coroutine_Shoot() // un peu bordélique mais ca marche bien et en vrai chaque ligne est simple
