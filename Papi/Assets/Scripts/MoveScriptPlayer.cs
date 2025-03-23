@@ -45,6 +45,10 @@ public class MoveScriptPlayer : MonoBehaviour
 	{
 		if (!imune) StartCoroutine(TakeHit());
 	}
+	private void OnCollisionStay2D(Collision2D other)
+	{
+		if (!imune) StartCoroutine(TakeHit());
+	}
 
 	private void Awake()
 	{
