@@ -37,7 +37,7 @@ public class MoveScriptPlayer : MonoBehaviour
 	private IEnumerator TakeHit()
 	{
 		imune = true;
-		//hpSystem.Coll();
+		hpSystem.Coll();
 		spriteRenderer.color = Color.red;
 		yield return new WaitForSeconds(0.2f);
 		spriteRenderer.color = Color.white;
