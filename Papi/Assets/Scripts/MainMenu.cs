@@ -8,7 +8,6 @@ public class MainMenu : MonoBehaviour
     public GameObject Options;
     public GameObject Credits;
     public GameObject Tutorial;
-    public AudioSource Mainsong;
     public AudioSource SFX;
 
     // Start is called before the first frame update
@@ -50,7 +49,6 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayNowB(){
         SFX.Play();
-        Mainsong.Stop();
         SceneManager.LoadScene("Paquito");
     }
     public void QuitB(){

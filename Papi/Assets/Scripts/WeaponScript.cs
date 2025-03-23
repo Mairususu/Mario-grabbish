@@ -31,9 +31,11 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] private GameObject projectileEau;
     [SerializeField] private GameObject projectileLightning;
     [SerializeField] private GameObject projectileNature;
+    [SerializeField] private AudioSource shootSFX;
 
     private IEnumerator Shoot(){
         _canShoot = false;
+        shootSFX.Play();
         if(myElement == Element.Fire) projectile = Instantiate(projectileFeu, transform.position, Quaternion.identity);
         if(myElement == Element.Water) projectile = Instantiate(projectileEau, transform.position, Quaternion.identity);
         if(myElement == Element.Lightning) projectile = Instantiate(projectileLightning, transform.position, Quaternion.identity);
