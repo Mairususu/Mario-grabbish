@@ -235,6 +235,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: myElement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: numPlayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -353,6 +361,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: numPlayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: projectileEau
+      value: 
+      objectReference: {fileID: 5760300752856881056, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: projectileFeu
+      value: 
+      objectReference: {fileID: 5202369308076669972, guid: cc81e7e69b38c2642b91541deed78594, type: 3}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: projectileNature
+      value: 
+      objectReference: {fileID: 8612612780771721806, guid: 22f944550f8c1bb45b6a7f987b7841b6, type: 3}
+    - target: {fileID: 3485201525490074610, guid: 1c3aab05344e6e54eb033a679b83e760, type: 3}
+      propertyPath: projectileLightning
+      value: 
+      objectReference: {fileID: 1050458777147558626, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

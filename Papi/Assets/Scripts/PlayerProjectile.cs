@@ -13,7 +13,7 @@ public class PlayerProjectile : MonoBehaviour
     }
 
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private int speed;
+    [SerializeField] public int speed;
     public Element Myelement;
 
     private void Start()

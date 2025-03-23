@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaterEnnemy : ElementalEnnemies
 {
-        [SerializeField] private GameObject projFoudre;
+    [SerializeField] public PlayerProjectile projFoudre;
         
     private void get_touched_by(PlayerProjectile.Element elem)
     { 
@@ -18,12 +18,24 @@ public class WaterEnnemy : ElementalEnnemies
             } break;
             case PlayerProjectile.Element.Water:
                 health -= 1  ;break;
-            case PlayerProjectile.Element.Lightning :
-                health = 0;
+            case PlayerProjectile.Element.Lightning:
+            {
+                Vector3 baseDirection = klass.get_direction_to(klass.cible);
                 for (int i = 0; i < 4; i++)
                 {
-                    Instantiate(projFoudre, transform.position, Quaternion.Euler(0, 0, i * 90));
-                } break;
+                    // Appliquer une rotation de 90° autour de l'axe Z
+                    Vector3 rotatedDirection = Quaternion.Euler(0, 0, i * 90) * baseDirection;
+        
+                    // Instancier le projectile avec la rotation appropriée
+                    PlayerProjectile LastProj = Instantiate(projFoudre, transform.position, Quaternion.Euler(0, 0, i * 90));
+        
+                    // Définir la direction et la vitesse du projectile
+                    LastProj.direction = rotatedDirection;
+                    LastProj.speed = 100;
+
+                }
+                health = 0;
+            } ;break;
         }
     }
 

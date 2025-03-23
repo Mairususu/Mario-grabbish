@@ -148,4 +148,4 @@ MonoBehaviour:
   health: 3
   damage: 1
   projectile: {fileID: 3387498053433863184, guid: 5b4f62815c8fadc41aa13a0b9909c3ea, type: 3}
-  projFoudre: {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
+  projFoudre: {fileID: 1050458777147558626, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
