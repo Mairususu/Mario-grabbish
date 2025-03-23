@@ -155,12 +155,12 @@ MonoBehaviour:
   myElement: 2
   spriteRenderer: {fileID: 5717293926522953795}
   cooldown: 0
-  cadence: 3
+  cadence: 0.75
   numPlayer: 2
-  projectileFeu: {fileID: 5975490799055414766, guid: cc81e7e69b38c2642b91541deed78594, type: 3}
-  projectileEau: {fileID: 6138126370018872922, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
-  projectileLightning: {fileID: 1462624085850690328, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
-  projectileNature: {fileID: 7879495990653131700, guid: 22f944550f8c1bb45b6a7f987b7841b6, type: 3}
+  projectileFeu: {fileID: 5202369308076669972, guid: cc81e7e69b38c2642b91541deed78594, type: 3}
+  projectileEau: {fileID: 5760300752856881056, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
+  projectileLightning: {fileID: 1050458777147558626, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
+  projectileNature: {fileID: 8612612780771721806, guid: 22f944550f8c1bb45b6a7f987b7841b6, type: 3}
   shootSFX: {fileID: 3940066700037869471}
   switchSFX: {fileID: 2399434664817961075}
 --- !u!82 &3940066700037869471
