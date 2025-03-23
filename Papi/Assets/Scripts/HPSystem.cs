@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HPSystem : MonoBehaviour
 {
-    public Image fill;
+    public TextMeshProUGUI HPText;
     private static int pvs;
     private static int pvmax=50;
     public GameObject DeathM;
@@ -17,20 +18,20 @@ public class HPSystem : MonoBehaviour
     private void Start()
     {
         pvs = pvmax;
+        Working();
     }
     public void Coll()
     {
         pvs -= 5;
         if(pvs <= 0){pvs = 0;}
 
-        Damage();
+        Working();
         if(pvs==0){GameOver();}
     }
 
-    private void Damage()
+    private void Working()
     {
-        fill.rectTransform.anchorMax.Set((float)((float)pvs/(float)pvmax),1.0f);
-        Debug.Log(((float)pvs/(float)pvmax) + " => " +fill.rectTransform.anchorMax);
+        HPText.text=pvs.ToString()+"/"+pvmax.ToString();
     }
     public void GameOver()
     {
