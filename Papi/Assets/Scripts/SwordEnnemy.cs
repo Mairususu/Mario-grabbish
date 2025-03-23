@@ -10,7 +10,7 @@ public class SwordEnemy : Ennemy
     {
         is_attacking = true;
         yield return new WaitForSeconds(cadence_attack);  // Ca marche mieux de laisser du temps après avoir tirer que partir juste après avoir tirer
-        Sword_hitzone lastProj = Instantiate(swordhitzone, transform.position, transform.rotation);
+        Sword_hitzone lastProj = Instantiate(swordhitzone, transform.position,  Quaternion.identity);
         lastProj.cible = cible;
         is_attacking = false;
     }

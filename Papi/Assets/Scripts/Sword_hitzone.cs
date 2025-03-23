@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
+
 
 public class Sword_hitzone : MonoBehaviour
 {
@@ -25,8 +27,8 @@ public class Sword_hitzone : MonoBehaviour
     
     private IEnumerator coroutine(Vector3 direct_cible)
     {
+        transform.right = direct_cible;
         yield return new WaitForSeconds(attack_duration);
-        transform.up = direct_cible;
         Destroy(gameObject);
     }
     // Update is called once per frame
