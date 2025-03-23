@@ -148,3 +148,5 @@ MonoBehaviour:
   health: 3
   damage: 1
   projectile: {fileID: 3387498053433863184, guid: 1fe2549a64e860240a25c9d55145ede1, type: 3}
+  dash_duration: 0.1
+  dash_threshold: 15
