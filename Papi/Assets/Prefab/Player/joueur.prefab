@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7151034261216899263}
   numJoueur: 1
-  moveSpeed: 3
+  moveSpeed: 4
   horizontalMovement: 0
   verticalMovement: 0
   spriteRenderer: {fileID: 5717293926522953795}

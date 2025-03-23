@@ -22,7 +22,8 @@ public class MoveScriptPlayer : MonoBehaviour
 	[SerializeField] private SpriteRenderer spriteRenderer;
 	private bool imune = false;
 	[SerializeField] private HPSystem hpSystem;
-
+	private Vector3 deplacement;
+	
 	public void ProjHit()
 	{
 		if (!imune) StartCoroutine(TakeHit());
@@ -66,16 +67,23 @@ public class MoveScriptPlayer : MonoBehaviour
 	}
 
 	void Update(){
-		if (numJoueur == PlayerNumber.Player1){
-			horizontalMovement = Input.GetAxis("Horizontal_Player1") * moveSpeed * Time.deltaTime;
-			verticalMovement = Input.GetAxis("Vertical_Player1") * moveSpeed * Time.deltaTime;}
-		if (numJoueur == PlayerNumber.Player2){
-			horizontalMovement = Input.GetAxis("Horizontal_Player2") * moveSpeed * Time.deltaTime;
-			verticalMovement = Input.GetAxis("Vertical_Player2") * moveSpeed * Time.deltaTime;}
-
+		if (numJoueur == PlayerNumber.Player1)
+		{
+			horizontalMovement = Input.GetAxis("Horizontal_Player1");
+			verticalMovement = Input.GetAxis("Vertical_Player1");
+		}
+		if (numJoueur == PlayerNumber.Player2)
+		{
+			horizontalMovement = Input.GetAxis("Horizontal_Player2") ;
+			verticalMovement = Input.GetAxis("Vertical_Player2");
+		}
+		
+		
+		deplacement = new Vector3(horizontalMovement, verticalMovement,0).normalized;
+		transform.position += deplacement * (Time.deltaTime * moveSpeed);
+		
 		if (horizontalMovement > 0) spriteRenderer.flipX = true;
 		else spriteRenderer.flipX = false;
-	
-		transform.position += new Vector3(horizontalMovement, verticalMovement,0);
+		
 	}
 }

@@ -57,6 +57,7 @@ public class Ennemy : MonoBehaviour
     private void Awake()
     {
         Player_1 = MoveScriptPlayer.instanceP1.gameObject;
-        Player_2 = MoveScriptPlayer.instanceP2.gameObject; 
+        Player_2 = MoveScriptPlayer.instanceP2.gameObject;
+        StartCoroutine(Coroutine_cible(MoveScriptPlayer.instanceP1.gameObject, MoveScriptPlayer.instanceP2.gameObject));
     } 
 }
