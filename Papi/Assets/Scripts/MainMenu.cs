@@ -49,7 +49,7 @@ public class MainMenu : MonoBehaviour
     }
     public void PlayNowB(){
         SFX.Play();
-        SceneManager.LoadScene("Paquito");
+        SceneManager.LoadScene("Bobinnzrd");
     }
     public void QuitB(){
         SFX.Play();
