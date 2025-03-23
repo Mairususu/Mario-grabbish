@@ -32,7 +32,7 @@ public class WeaponScript : MonoBehaviour
     [SerializeField] private GameObject projectileLightning;
     [SerializeField] private GameObject projectileNature;
     [SerializeField] private AudioSource shootSFX;
-
+    [SerializeField] private AudioSource switchSFX;
     private IEnumerator Shoot(){
         _canShoot = false;
         shootSFX.Play();
@@ -64,6 +64,7 @@ public class WeaponScript : MonoBehaviour
     private IEnumerator Switch()
     {
         _canSwitch = false;
+        switchSFX.Play();
         if (myElement == Element.Fire) myElement = Element.Water;
         else if(myElement == Element.Water) myElement = Element.Fire;
         else if(myElement == Element.Nature) myElement = Element.Lightning;
