@@ -9,6 +9,7 @@ public class Sword_hitzone : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private float attack_duration;
+    private MoveScriptPlayer move;
 
     public GameObject cible; 
     
@@ -31,10 +32,10 @@ public class Sword_hitzone : MonoBehaviour
         yield return new WaitForSeconds(attack_duration);
         Destroy(gameObject);
     }
-    // Update is called once per frame
-    void Update()
+
+    void OnTriggerStay2D(Collider2D other)
     {
-        
+        if (other.TryGetComponent<MoveScriptPlayer>(out move)) move.ProjHit();
     }
     
 }

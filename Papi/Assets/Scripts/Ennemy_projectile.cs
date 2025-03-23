@@ -4,7 +4,8 @@ public class EnnemyProjectile : MonoBehaviour  //Faudra rajouter le fait que ca 
 {
 
     [SerializeField] public Vector3 direction;
-    
+
+    private MoveScriptPlayer move;
     public float projectileSpeed;
     
     // Update is called once per frame
@@ -16,6 +17,7 @@ public class EnnemyProjectile : MonoBehaviour  //Faudra rajouter le fait que ca 
     
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.TryGetComponent<MoveScriptPlayer>(out move)) move.ProjHit();
         Destroy(gameObject);
     }
 

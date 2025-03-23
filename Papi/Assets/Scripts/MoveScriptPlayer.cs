@@ -22,11 +22,21 @@ public class MoveScriptPlayer : MonoBehaviour
 	[SerializeField] private SpriteRenderer spriteRenderer;
 	private bool imune = false;
 	[SerializeField] private HPSystem hpSystem;
-	
-	IEnumerator TakeHit()
+
+	public void ProjHit()
+	{
+		if (!imune) StartCoroutine(TakeHit());
+	}
+
+	private void OnCollisionStay(Collision other)
+	{
+		StartCoroutine(TakeHit());
+	}
+
+	private IEnumerator TakeHit()
 	{
 		imune = true;
-		hpSystem.Coll();
+		//hpSystem.Coll();
 		spriteRenderer.color = Color.red;
 		yield return new WaitForSeconds(0.2f);
 		spriteRenderer.color = Color.white;
@@ -39,15 +49,6 @@ public class MoveScriptPlayer : MonoBehaviour
 		yield return new WaitForSeconds(0.2f);
 		spriteRenderer.color = Color.white;
 		imune = false;
-	}
-	
-	private void OnCollisionEnter2D(Collision2D other)
-	{
-		if (!imune) StartCoroutine(TakeHit());
-	}
-	private void OnCollisionStay2D(Collision2D other)
-	{
-		if (!imune) StartCoroutine(TakeHit());
 	}
 
 	private void Awake()
