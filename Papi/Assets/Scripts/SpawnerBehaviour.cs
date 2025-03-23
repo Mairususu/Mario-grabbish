@@ -11,16 +11,14 @@ public class SpawnerBehaviour : MonoBehaviour
     [SerializeField] private float cooldown;
     [SerializeField] private float cooldownTimer;
 
-    private bool canSpawn = true;
+    public bool canSpawn = true;
 
     private IEnumerator Spawn()
     {
         canSpawn = false;
+        Instantiate(ennemis[Random.Range(0, ennemis.Length)], transform.position, Quaternion.identity);
         yield return new WaitForSeconds(cooldown);
         if (cooldown > 0.5) cooldown -= cooldownTimer;
-        GameObject newEnnemy = Instantiate(ennemis[Random.Range(0, ennemis.Length)], transform.position, Quaternion.identity);
-        newEnnemy.GetComponent<Ennemy>().Player_1 = player1;
-        newEnnemy.GetComponent<Ennemy>().Player_2 = player2;
         canSpawn = true;
     }
     

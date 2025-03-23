@@ -183,6 +183,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -299,6 +307,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -616,6 +632,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -762,6 +786,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -896,6 +928,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1042,6 +1082,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1111,6 +1159,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1180,6 +1236,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1249,6 +1313,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1661,6 +1733,14 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
@@ -1730,6 +1810,18 @@ PrefabInstance:
       propertyPath: player2
       value: 
       objectReference: {fileID: 54418762}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldown
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: inactiveTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2166206810138221819, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
+      propertyPath: cooldownTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2652315520198042102, guid: f0d327985ef61674d924e299ed520b6c, type: 3}
       propertyPath: m_Icon
       value: 
