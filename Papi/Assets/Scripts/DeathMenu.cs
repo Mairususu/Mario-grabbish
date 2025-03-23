@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 public class DeathMenu : MonoBehaviour
 {
     public AudioSource SFX;
+
+    public GameObject DEM;
     // Start is called before the first frame update
     
     void Start()
     {
-        gameObject.SetActive(false);
+        DEM.SetActive(false);
     }
     
     public void ToMain(){
