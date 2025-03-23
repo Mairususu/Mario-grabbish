@@ -475,26 +475,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 364046291415778837, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721907706226787333, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721907706226787333, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721907706226787333, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2721907706226787333, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4968983143992530423, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -578,70 +558,6 @@ PrefabInstance:
     - target: {fileID: 5017664863283202358, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
       propertyPath: m_Name
       value: MainCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989242570336841251, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989242570336841251, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989242570336841251, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5989242570336841251, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6736649729980263723, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_Color.a
-      value: 0.7647059
-      objectReference: {fileID: 0}
-    - target: {fileID: 8068589830701286026, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_text
-      value: 'Level up- FASSounds
-
-        Level III Medium - moodmode
-
-        Game
-        Over Groove - Alpit
-
-        8 bit background - White_Records
-
-        beam
-        fire - u_qoe8xdq7hm
-
-        Fire Sound effects - Alice_soundz
-
-        Thunder
-        - Universfield
-
-        water bubbles -Liecio
-
-        Hit Plant 01 - u_xjrmmgxfru
-
-        teleport
-        - freesound_community
-
-        Neon Gaming - dopestuff'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070157784484205835, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070157784484205835, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070157784484205835, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8070157784484205835, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
