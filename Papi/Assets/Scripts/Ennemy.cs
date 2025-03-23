@@ -11,12 +11,16 @@ public class Ennemy : MonoBehaviour
 
 
     [SerializeField] public double speed;
-    [SerializeField] public int cadence_changement_de_cible;
+    [SerializeField] public float cadence_changement_de_cible;
+    [SerializeField] protected float cadence_attack; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
     [SerializeField] public GameObject Player_1;
     [SerializeField] public GameObject Player_2;
     [SerializeField] protected double range; // Range à partir de laquelle ils n'approchent plus (grand pour archer, très faible pour melee) (à régler dans les préfab
     [SerializeField] protected double hittingRange; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
+    [SerializeField] public EnnemyProjectile projectileEnnemy; //Ca sert que pour l'archer mais le mettre que dans la classe fille me fait bien chier '
 
+    
+    
     protected bool is_choosing_cible = false; // Permet de savoir si la coroutine de choix de cible est lancé ou s'il faut la relancer
     public GameObject cible; //Ne pas mettre de GO dans ce prefab, il va se remplir automatiquement en choisissant soit p1 ou p2 en fonction de leur distance à l'ennemi
 
@@ -53,7 +57,6 @@ public class Ennemy : MonoBehaviour
     private void Awake()
     {
         Player_1 = MoveScriptPlayer.instanceP1.gameObject;
-        Player_2 = MoveScriptPlayer.instanceP2.gameObject;
-        
-    }
+        Player_2 = MoveScriptPlayer.instanceP2.gameObject; 
+    } 
 }

@@ -97,11 +97,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb7f2f81d15b6b41b06b40f494a5f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  cadence_changement_de_cible: 3
+  speed: 3
+  cadence_changement_de_cible: 0.5
+  cadence_attack: 1.5
   Player_1: {fileID: 0}
   Player_2: {fileID: 0}
   range: 8.5
   hittingRange: 10
+  projectileEnnemy: {fileID: 0}
   cible: {fileID: 0}
-  projectileEnnemy: {fileID: 3876132115508737588, guid: 54d83b36278a66040997f526495334f3, type: 3}
+  projectile_speed: 8
+  temps_cast: 0.2

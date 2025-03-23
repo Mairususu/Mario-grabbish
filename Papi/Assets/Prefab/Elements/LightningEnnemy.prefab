@@ -147,3 +147,4 @@ MonoBehaviour:
   klassMelee: {fileID: 8670407096292889193, guid: fb96da908d8f81c4fa6a991e3dc50141, type: 3}
   health: 3
   damage: 1
+  projectile: {fileID: 3387498053433863184, guid: 1fe2549a64e860240a25c9d55145ede1, type: 3}
