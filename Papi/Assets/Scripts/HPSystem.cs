@@ -12,6 +12,7 @@ public class HPSystem : MonoBehaviour
     private static int pvmax=50;
     public GameObject DeathM;
     
+    
 
     private void Start()
     {
@@ -28,8 +29,8 @@ public class HPSystem : MonoBehaviour
 
     private void Damage()
     {
-        fill.rectTransform.anchorMax.Set((pvs/pvmax),1.0f);
-        
+        fill.rectTransform.anchorMax.Set((float)((float)pvs/(float)pvmax),1.0f);
+        Debug.Log(((float)pvs/(float)pvmax) + " => " +fill.rectTransform.anchorMax);
     }
     public void GameOver()
     {

@@ -34,7 +34,6 @@ public class Sword_hitzone : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("ntm");
         if (other.TryGetComponent<MoveScriptPlayer>(out move)) move.ProjHit();
     }
     
