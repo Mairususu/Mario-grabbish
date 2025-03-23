@@ -28,13 +28,13 @@ public class HPSystem : MonoBehaviour
 
     private void Damage()
     {
-        fill.rectTransform.anchorMax.Set(pvs/pvmax,1);
+        fill.rectTransform.anchorMax.Set((pvs/pvmax),1.0f);
         
     }
     public void GameOver()
     {
         Debug.Log("MAMA MIA");
         Time.timeScale = 0;
-        DeathM.SetActive(false);
+        DeathM.SetActive(true);
     }
 }
