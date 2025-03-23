@@ -11,7 +11,9 @@ public class timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = time.ToString("00:00");
+        int minutes = Mathf.FloorToInt(time/60);
+        int secondes = Mathf.FloorToInt(time%60);
+        text.text = string.Format("{0:00}:{1:00}", minutes, secondes);
         time += Time.deltaTime;
     }
 }

@@ -19,7 +19,7 @@ public class PlayerProjectile : MonoBehaviour
     void Update()
     {
         if(direction == Vector3.zero) transform.position += Time.deltaTime * speed/4 * new Vector3(1,0,0);
-        transform.position += Time.deltaTime * speed * direction;
+        transform.position += Time.deltaTime * speed * direction.normalized/4;
     }
     
 }
