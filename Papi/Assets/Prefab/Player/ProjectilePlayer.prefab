@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
+  spriteRenderer: {fileID: 2495783481097183514}
   speed: 100
   Myelement: 0
 --- !u!50 &5762931189539833256
