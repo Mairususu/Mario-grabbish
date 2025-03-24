@@ -56,7 +56,7 @@ public class WeaponScript : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.H) ) || (Input.GetKeyDown(KeyCode.RightArrow)) ) directionproj += new Vector3(1f , 0f , 0f);            // Ca va être un peu moche mais bon
         
         PlayerProjectile lastProj = Instantiate(projectileFuture, transform.position, Quaternion.identity);
-        lastProj.direction = directionproj;
+        lastProj.direction = directionproj.normalized;
         yield return new WaitForSeconds(cadence);
         _canShoot = true;
     }
