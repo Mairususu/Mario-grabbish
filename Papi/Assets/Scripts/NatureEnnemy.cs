@@ -12,7 +12,7 @@ public class NatureEnnemy : ElementalEnnemies
             case PlayerProjectile.Element.Water:
             {
                 StartCoroutine(TakeHit(Color.yellow));
-                health += 1  ;break;
+                health += 1  ;
                 Instantiate(ennemyNature, transform.position + new Vector3(1.0f, 1.0f, 1.0f), Quaternion.identity);
             } break;
             case PlayerProjectile.Element.Fire:
@@ -27,7 +27,7 @@ public class NatureEnnemy : ElementalEnnemies
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerProjectile p;
-        if (!other.TryGetComponent<PlayerProjectile>(out p)) return;
+        if (!other.TryGetComponent(out p)) return;
         get_touched_by(p.Myelement);
         Destroy(p.gameObject);
     }

@@ -1,13 +1,9 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.Serialization;
+
 
 public class WeaponScript : MonoBehaviour
 {
-    private Vector3 directionproj;
-
     enum Element
     {
         Fire,
@@ -32,8 +28,8 @@ public class WeaponScript : MonoBehaviour
 
     private bool _canSwitch = true;
 
-    [SerializeField] private PlayerProjectile projectileFeu;
-    [SerializeField] private PlayerProjectile projectileEau;
+    [SerializeField] private PlayerProjectile projectileFire;
+    [SerializeField] private PlayerProjectile projectileWater;
     [SerializeField] private PlayerProjectile projectileLightning;
     [SerializeField] private PlayerProjectile projectileNature;
     [SerializeField] private AudioSource shootSFX;
@@ -43,25 +39,24 @@ public class WeaponScript : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+        PlayerProjectile projectileFuture;
         _canShoot = false;
         shootSFX.Play();
-        if (myElement == Element.Fire) projectile = Instantiate(projectileFeu, transform.position, Quaternion.identity);
-        if (myElement == Element.Water)
-            projectile = Instantiate(projectileEau, transform.position, Quaternion.identity);
-        if (myElement == Element.Lightning)
-            projectile = Instantiate(projectileLightning, transform.position, Quaternion.identity);
-        if (myElement == Element.Nature)
-            projectile = Instantiate(projectileNature, transform.position, Quaternion.identity);
-
-        directionproj = Vector3.zero;
+        switch (myElement)
+        {
+            case Element.Fire : projectileFuture = projectileFire; break;
+            case Element.Water : projectileFuture = projectileWater; break; 
+            case Element.Lightning : projectileFuture = projectileLightning; break; 
+            default : projectileFuture = projectileNature; break;
+        }
+        Vector3 directionproj = Vector3.zero;
         if ((Input.GetKeyDown(KeyCode.T) ) || (Input.GetKeyDown(KeyCode.UpArrow)) ) directionproj += new Vector3(0f , 1f , 0f);            // Ca va être un peu moche mais bon
         if ((Input.GetKeyDown(KeyCode.F) ) || (Input.GetKeyDown(KeyCode.LeftArrow)) ) directionproj += new Vector3(-1f , 0f , 0f);            // Ca va être un peu moche mais bon
         if ((Input.GetKeyDown(KeyCode.G) ) || (Input.GetKeyDown(KeyCode.DownArrow)) ) directionproj += new Vector3(0f , -1f , 0f);            // Ca va être un peu moche mais bon
         if ((Input.GetKeyDown(KeyCode.H) ) || (Input.GetKeyDown(KeyCode.RightArrow)) ) directionproj += new Vector3(1f , 0f , 0f);            // Ca va être un peu moche mais bon
         
-        
-        projectile.direction = directionproj;
-        directionproj = Vector3.zero;
+        PlayerProjectile lastProj = Instantiate(projectileFuture, transform.position, Quaternion.identity);
+        lastProj.direction = directionproj;
         yield return new WaitForSeconds(cadence);
         _canShoot = true;
     }

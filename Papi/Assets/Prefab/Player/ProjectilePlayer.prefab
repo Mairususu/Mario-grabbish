@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd97fa0054d2c994e815dc692f4ff471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orientation: {x: 0, y: 0, z: 0}
   direction: {x: 0, y: 0, z: 0}
   spriteRenderer: {fileID: 2495783481097183514}
-  speed: 100
+  speed: 30
   Myelement: 0
 --- !u!50 &5762931189539833256
 Rigidbody2D:

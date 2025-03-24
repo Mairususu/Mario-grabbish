@@ -157,8 +157,8 @@ MonoBehaviour:
   cooldown: 0
   cadence: 0.75
   numPlayer: 2
-  projectileFeu: {fileID: 5202369308076669972, guid: cc81e7e69b38c2642b91541deed78594, type: 3}
-  projectileEau: {fileID: 5760300752856881056, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
+  projectileFire: {fileID: 3738916048337696528, guid: 4223da9150adfb94098533e8b7927aa1, type: 3}
+  projectileWater: {fileID: 5760300752856881056, guid: e5cf9944d6aeebb449285bcdb06dcaa9, type: 3}
   projectileLightning: {fileID: 1050458777147558626, guid: 37d1efd847786074fb0526feefb3541d, type: 3}
   projectileNature: {fileID: 8612612780771721806, guid: 22f944550f8c1bb45b6a7f987b7841b6, type: 3}
   shootSFX: {fileID: 3940066700037869471}
