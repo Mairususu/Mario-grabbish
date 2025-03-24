@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975641401047557666}
   - component: {fileID: 1559846320077759845}
+  - component: {fileID: -4259595507216158626}
   - component: {fileID: -7703986279400044708}
   - component: {fileID: 6848999493139961821}
   m_Layer: 6
@@ -86,6 +87,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &-4259595507216158626
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547180720854183975}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 0
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!61 &-7703986279400044708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +143,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -148,4 +176,5 @@ MonoBehaviour:
   health: 3
   damage: 1
   projectile: {fileID: 3387498053433863184, guid: a33b3a35e853e514d828ae364f1f4c77, type: 3}
+  spriteRenderer: {fileID: 1559846320077759845}
   ennemyNature: {fileID: 6547180720854183975}

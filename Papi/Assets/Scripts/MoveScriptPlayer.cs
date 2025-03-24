@@ -29,26 +29,22 @@ public class MoveScriptPlayer : MonoBehaviour
 		if (!imune) StartCoroutine(TakeHit());
 	}
 
-	private void OnCollisionStay(Collision other)
+	private void OnCollisionStay(Collision other) // ici je rajoute le fait que ce soit un projectile ennemy car je vais réactiver les collisions entre joueurs et collisions
 	{
-		StartCoroutine(TakeHit());
+		if (other.gameObject.layer == 9) // Pour qu'il prenne des dégats uniqument avec les projectiles ennemis
+			StartCoroutine(TakeHit());
 	}
 
 	private IEnumerator TakeHit()
 	{
 		imune = true;
 		hpSystem.Coll();
-		spriteRenderer.color = Color.red;
-		yield return new WaitForSeconds(0.2f);
-		spriteRenderer.color = Color.white;
-		yield return new WaitForSeconds(0.2f);
-		spriteRenderer.color = Color.red;
-		yield return new WaitForSeconds(0.2f);
-		spriteRenderer.color = Color.white;
-		yield return new WaitForSeconds(0.2f);
-		spriteRenderer.color = Color.red;
-		yield return new WaitForSeconds(0.2f);
-		spriteRenderer.color = Color.white;
+		for (int i = 0; i < 3; i++) {
+			spriteRenderer.color = Color.red;
+			yield return new WaitForSeconds(0.2f);
+			spriteRenderer.color = Color.white;
+			yield return new WaitForSeconds(0.2f);
+		}
 		imune = false;
 	}
 

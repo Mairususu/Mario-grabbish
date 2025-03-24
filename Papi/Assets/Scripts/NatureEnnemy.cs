@@ -11,12 +11,15 @@ public class NatureEnnemy : ElementalEnnemies
         {
             case PlayerProjectile.Element.Water:
             {
+                StartCoroutine(TakeHit(Color.yellow));
+                health += 1  ;break;
                 Instantiate(ennemyNature, transform.position + new Vector3(1.0f, 1.0f, 1.0f), Quaternion.identity);
             } break;
             case PlayerProjectile.Element.Fire:
                 health = 0  ;
                 break;
             case PlayerProjectile.Element.Nature :
+                StartCoroutine(TakeHit(Color.red));
                 health -= 1; break;
         }
     }

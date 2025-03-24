@@ -19,10 +19,7 @@ public class LightningEnnemy : ElementalEnnemies
         yield return new WaitForSeconds(dash_duration);
         dash_speed = 0;
     }
-
-    public class ArcherEnnemy : Ennemy
-    {
-    }
+    
     private void get_touched_by(PlayerProjectile.Element elem)
     { 
         switch (elem)
@@ -33,14 +30,17 @@ public class LightningEnnemy : ElementalEnnemies
             } break;
             case PlayerProjectile.Element.Fire:
             {
+                StartCoroutine(TakeHit(Color.red));
                 health -= 1  ;break;
             }
             case PlayerProjectile.Element.Lightning :
-                health -= 1;
-                for (int i = 0; i < 4; i++)
-                {
-                    StartCoroutine(dashCoroutine());
-                } break;
+            {
+                StartCoroutine(TakeHit(Color.green));
+                health += 1;
+                StartCoroutine(dashCoroutine());
+            }
+
+        ;break;
         }
     }
 

@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd172f3cee68b14e96a2897c2f9ec97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
   cadence_changement_de_cible: 0.5
-  cadence_attack: 1.5
+  cadence_attack: 1
   Player_1: {fileID: 0}
   Player_2: {fileID: 0}
   range: 1.5

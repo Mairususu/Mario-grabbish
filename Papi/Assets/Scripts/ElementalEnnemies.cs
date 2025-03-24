@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using System.Collections;
+using UnityEditor;
 using Random = UnityEngine.Random;
 
 public class ElementalEnnemies : MonoBehaviour
@@ -11,7 +13,20 @@ public class ElementalEnnemies : MonoBehaviour
     [SerializeField] protected EnnemyProjectile projectile;
 
     protected Ennemy klass;  // Déclare l'ennemi choisi
+    
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
+
+
+    protected IEnumerator TakeHit(Color color)
+    {
+        for (int i = 0; i < 2; i++) {
+            spriteRenderer.color = color;
+            yield return new WaitForSeconds(0.1f);
+            spriteRenderer.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
     void Start()
     {
         // Assigne les joueurs aux ennemis
@@ -19,10 +34,7 @@ public class ElementalEnnemies : MonoBehaviour
         klassArcher.Player_1 = MoveScriptPlayer.instanceP1.gameObject;
         klassMelee.Player_2 = MoveScriptPlayer.instanceP2.gameObject;
 
-        // Choisit aléatoirement entre 1 et 2
         int randomChoice = Random.Range(1, 3);
-
-        // Instancie l'ennemi et caste en Ennemy
         if (randomChoice == 1)
         {
             klass = Instantiate(klassArcher, transform);

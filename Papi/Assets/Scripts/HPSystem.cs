@@ -10,7 +10,7 @@ public class HPSystem : MonoBehaviour
 {
     public TextMeshProUGUI HPText;
     private static int pvs;
-    private static int pvmax=50;
+    private static int pvmax = 80000;
     public GameObject DeathM;
     
     
@@ -35,7 +35,6 @@ public class HPSystem : MonoBehaviour
     }
     public void GameOver()
     {
-        Debug.Log("MAMA MIA");
         Time.timeScale = 0;
         DeathM.SetActive(true);
     }

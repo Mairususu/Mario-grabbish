@@ -16,16 +16,21 @@ public class FireEnnemy : ElementalEnnemies
         {
             case PlayerProjectile.Element.Fire:
             {
-                health -= 1;
-                transform.localScale *= 1.2f;
+                StartCoroutine(TakeHit(Color.green ));
+                health += 1;
+                transform.localScale *= 1.4f;
+                klass.hittingRange *= 1.5f;
             }; break;
             case PlayerProjectile.Element.Water:
             {
                 health = 0  ; 
                 canExplode = false;
             } ;break;
-            case PlayerProjectile.Element.Lightning :
+            case PlayerProjectile.Element.Lightning:
+            {
+                StartCoroutine(TakeHit(Color.red));
                 health -= 1; break;
+            }
         }
     }
 
