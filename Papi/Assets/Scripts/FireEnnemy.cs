@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class FireEnnemy : ElementalEnnemies
 {
-    [SerializeField] private GameObject projectileExplosion;
+    [SerializeField] private Sword_hitzone projectileExplosion;
     private bool canExplode;
     
     private void get_touched_by(PlayerProjectile.Element elem)
@@ -23,7 +23,7 @@ public class FireEnnemy : ElementalEnnemies
             }; break;
             case PlayerProjectile.Element.Water:
             {
-                health = 0  ; 
+                health = 0  ;
                 canExplode = false;
             } ;break;
             case PlayerProjectile.Element.Lightning:
@@ -37,7 +37,7 @@ public class FireEnnemy : ElementalEnnemies
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerProjectile p;
-        if (other.TryGetComponent<PlayerProjectile>(out p))
+        if (other.TryGetComponent(out p))
         {
             get_touched_by(p.Myelement);
             Destroy(p.gameObject);
@@ -47,11 +47,12 @@ public class FireEnnemy : ElementalEnnemies
 
    private void explosion()
    {
-       GameObject explosion = Instantiate(projectileExplosion, transform.position, Quaternion.identity);
+       Sword_hitzone explosion = Instantiate(projectileExplosion, transform.position, Quaternion.identity);
+       explosion.cible = klass.cible;
    }
 
     // Start is called before the first frame update
-    void OnSpawnPrefab()
+    void Awake()
     {
         canExplode = true;
     }
@@ -59,7 +60,7 @@ public class FireEnnemy : ElementalEnnemies
     // Update is called once per frame
     void Update()
     {
-        if (health == 0 )
+        if (health == 0) // Jsp pk il arrivait à mourir énormement de fois avant donc ca faisait buguer
         {
             if (canExplode) explosion();
             Destroy(gameObject);

@@ -167,4 +167,4 @@ MonoBehaviour:
   damage: 1
   projectile: {fileID: 3387498053433863184, guid: bfbc839b3eccd92439d2861cf0ab423f, type: 3}
   spriteRenderer: {fileID: -1060224112724330389}
-  projectileExplosion: {fileID: 6095187219867285726, guid: 2f1dc279d9256f04a9e64c812ece42b2, type: 3}
+  projectileExplosion: {fileID: -3028184667122122457, guid: 2f1dc279d9256f04a9e64c812ece42b2, type: 3}
