@@ -16,6 +16,7 @@ public class DeathMenu : MonoBehaviour
     
     public void ToMain(){
         SFX.Play();
+        Time.timeScale=1;
         SceneManager.LoadScene("Bait");
     }
     public void QuitB()
