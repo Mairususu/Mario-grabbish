@@ -525,6 +525,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7844247461947539396, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844247461947539396, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844247461947539396, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844247461947539396, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1107389782702197119}
+    - target: {fileID: 7844247461947539396, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToMain
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844247461947539396, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8148628059894761278, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -580,6 +604,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5520432374262956634}
   m_SourcePrefab: {fileID: 100100000, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+--- !u!114 &1107389782702197119 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1969475985047843976, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
+  m_PrefabInstance: {fileID: 1444185272876858871}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3403886574962438634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6516d1fb88e604698f4d0b26ca6a5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3403886574962438634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4267105759666867229, guid: 36609707e40ee084ea1b1e4a221a7b9b, type: 3}
