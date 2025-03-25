@@ -244,12 +244,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341070551}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.03, y: -10.57, z: 0}
   m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1912366142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &377296013
 GameObject:
@@ -664,7 +664,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4721748006675761441, guid: 04c8ca9c598395349818e32bb05c5851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 757811524}
+    - targetCorrespondingSourceObject: {fileID: 4721748006675761441, guid: 04c8ca9c598395349818e32bb05c5851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1187920597}
+    - targetCorrespondingSourceObject: {fileID: 4721748006675761441, guid: 04c8ca9c598395349818e32bb05c5851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 341070553}
+    - targetCorrespondingSourceObject: {fileID: 4721748006675761441, guid: 04c8ca9c598395349818e32bb05c5851, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1849368950}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c8ca9c598395349818e32bb05c5851, type: 3}
 --- !u!1 &757811522
@@ -737,12 +749,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757811522}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 17.05, y: 0.11871948, z: 0}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1912366142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &828626423 stripped
 RectTransform:
@@ -841,6 +853,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 377296017}
     m_Modifications:
+    - target: {fileID: 9188730721553701, guid: 78fba883e43c7924aafd6329e3647d1b, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b44cb39aa8c4134b85fd2bb1b0ffdc4, type: 3}
     - target: {fileID: 4255923109257280808, guid: 78fba883e43c7924aafd6329e3647d1b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1100,12 +1116,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187920595}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -17.23, y: 0.11871948, z: 0}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1912366142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1849368948
 GameObject:
@@ -1177,13 +1193,18 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849368948}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -0.03, y: 10.62, z: 0}
   m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1912366142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!4 &1912366142 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4721748006675761441, guid: 04c8ca9c598395349818e32bb05c5851, type: 3}
+  m_PrefabInstance: {fileID: 597236990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1920054115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,8 +1526,4 @@ SceneRoots:
   - {fileID: 900086486}
   - {fileID: 377296017}
   - {fileID: 406901465}
-  - {fileID: 757811524}
-  - {fileID: 1187920597}
-  - {fileID: 341070553}
-  - {fileID: 1849368950}
   - {fileID: 597236990}

@@ -306,6 +306,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2357451080070879730, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357451080070879730, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357451080070879730, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.39607844
+      objectReference: {fileID: 0}
     - target: {fileID: 4968983143992530423, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -390,6 +402,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5177999911242382446, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_text
+      value: 'Command Player1:
+
+        -Move:zqsd
+
+        -Change Element: left
+        shift
+
+        -Shoot: Spacebar
+
+
+        Command Player2(all on the numpad):
+
+        -Move:8/4/5/6
+
+        -Change
+        Element: +
+
+        -Shoot: fleche directionnel
+
+
+        Echap: Pause/Resume'
+      objectReference: {fileID: 0}
     - target: {fileID: 6133107148946277458, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -405,6 +441,30 @@ PrefabInstance:
     - target: {fileID: 6133107148946277458, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482625414264756892, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482625414264756892, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482625414264756892, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572682234501481981, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572682234501481981, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 7572682234501481981, guid: f0796876cf6ca954195dbcbb1d7a5ceb, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.39607844
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
