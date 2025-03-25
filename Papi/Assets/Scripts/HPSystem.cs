@@ -10,7 +10,7 @@ public class HPSystem : MonoBehaviour
 {
     public TextMeshProUGUI HPText;
     private static int pvs;
-    private static int pvmax = 5;
+    private static int pvmax = 50;
     public GameObject DeathM;
     
     

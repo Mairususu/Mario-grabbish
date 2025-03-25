@@ -1,10 +1,13 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 
 public class WaterEnnemy : ElementalEnnemies
 {
     [SerializeField] public PlayerProjectile projFoudre;
+    [SerializeField] private AudioSource Source;
+    [SerializeField] private List<AudioClip> projectileSound;
         
     private void get_touched_by(PlayerProjectile.Element elem)
     { 
@@ -13,6 +16,8 @@ public class WaterEnnemy : ElementalEnnemies
             case PlayerProjectile.Element.Nature:
             {
                 StartCoroutine(TakeHit(Color.yellow));
+                Source.clip=projectileSound[0];
+                Source.Play();
                 health -= 1;
                 transform.localScale *= 0.6f;
                 klass.speed *= 1.5f;
@@ -20,10 +25,14 @@ public class WaterEnnemy : ElementalEnnemies
             case PlayerProjectile.Element.Water:
             {
                 StartCoroutine(TakeHit(Color.red));
+                Source.clip=projectileSound[1];
+                Source.Play();
                 health -= 1  ;break;
             }
             case PlayerProjectile.Element.Lightning:
             {
+                Source.clip=projectileSound[2];
+                Source.Play();
                 Vector3 baseDirection = klass.get_direction_to(klass.cible);
                 for (int i = 0; i < 4; i++)
                 {

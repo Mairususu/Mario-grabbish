@@ -9,6 +9,8 @@ public class FireEnnemy : ElementalEnnemies
     [SerializeField] private Sword_hitzone projectileExplosion;
     private bool canExplode;
     public int numBoost = 0;
+    [SerializeField] private AudioSource Source;
+    [SerializeField] private List<AudioClip> projectileSound;
     private void get_touched_by(PlayerProjectile.Element elem)
     { 
         switch (elem)
@@ -16,6 +18,8 @@ public class FireEnnemy : ElementalEnnemies
             case PlayerProjectile.Element.Fire:
             {
                 StartCoroutine(TakeHit(Color.green ));
+                Source.clip=projectileSound[0];
+                Source.Play();
                 health += 1;
                 klass.numBoost++; // c con d'avoir le truc stocké sur les deux je sais , mais j'ai fait les classes en un jour, y a des problèmes de hiérarchie...
                 numBoost++;
@@ -24,11 +28,15 @@ public class FireEnnemy : ElementalEnnemies
             }; break;
             case PlayerProjectile.Element.Water:
             {
+                Source.clip=projectileSound[1];
+                Source.Play();
                 health = 0  ;
                 canExplode = false;
             } ;break;
             case PlayerProjectile.Element.Lightning:
             {
+                Source.clip=projectileSound[2];
+                Source.Play();
                 StartCoroutine(TakeHit(Color.red));
                 health -= 1; break;
             }
