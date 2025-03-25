@@ -21,6 +21,7 @@ public class ArcherEnnemy : Ennemy
         yield return new WaitForSeconds(tempsCast * 0.75f);  // Ca marche mieux de laisser du temps après avoir tirer que partir juste après avoir tirer
         EnnemyProjectile lastProj = Instantiate(projectileEnnemy, transform.position, transform.rotation);
         lastProj.direction = get_direction_to(cible);
+        for (int i = 0; i < numBoost; i++) lastProj.transform.localScale *= 1.5f;
         yield return new WaitForSeconds(tempsCast * 0.25f );
         IsCasting = false;
         IsShooting = false;

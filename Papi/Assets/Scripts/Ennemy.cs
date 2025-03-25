@@ -9,7 +9,7 @@ public class Ennemy : MonoBehaviour
 {
 
 
-
+// prob c'est que c'est une classe abstraite sauf que c'est elle que j'ai fout dans les mobs donc c'est un peu bizarre
     [SerializeField] public double speed;
     [SerializeField] public float cadence_changement_de_cible;
     [SerializeField] protected float cadence_attack; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
@@ -19,7 +19,8 @@ public class Ennemy : MonoBehaviour
     [SerializeField] public double hittingRange; // Range à partir de laquelle ils peuvent te tirer dessus, ou te mettre un coup d'épée  doit être + grand que range obligatoirement 
     [SerializeField] public EnnemyProjectile projectileEnnemy; //Ca sert que pour l'archer mais le mettre que dans la classe fille me fait bien chier '
     [SerializeField] public Sword_hitzone swordhitzone; // idem que pour melee mais chiant si en dessous
-    
+    public  int numBoost = 0; // Sert uniquement pour le type feu qui grossit ses projectiles en grandissant  pareil, que pr archer mais un peu mais en foutant dans archer j'y arrive pas
+
     
     protected bool is_choosing_cible = false; // Permet de savoir si la coroutine de choix de cible est lancé ou s'il faut la relancer
     public GameObject cible; //Ne pas mettre de GO dans ce prefab, il va se remplir automatiquement en choisissant soit p1 ou p2 en fonction de leur distance à l'ennemi

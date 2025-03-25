@@ -8,7 +8,7 @@ public class FireEnnemy : ElementalEnnemies
 {
     [SerializeField] private Sword_hitzone projectileExplosion;
     private bool canExplode;
-    
+    public int numBoost = 0;
     private void get_touched_by(PlayerProjectile.Element elem)
     { 
         switch (elem)
@@ -17,8 +17,10 @@ public class FireEnnemy : ElementalEnnemies
             {
                 StartCoroutine(TakeHit(Color.green ));
                 health += 1;
+                klass.numBoost++; // c con d'avoir le truc stocké sur les deux je sais , mais j'ai fait les classes en un jour, y a des problèmes de hiérarchie...
+                numBoost++;
                 transform.localScale *= 1.4f;
-                klass.hittingRange *= 1.5f;
+                klass.hittingRange *= 1.4f;
             }; break;
             case PlayerProjectile.Element.Water:
             {
@@ -46,8 +48,11 @@ public class FireEnnemy : ElementalEnnemies
 
    private void explosion()
    {
-       Sword_hitzone explosion = Instantiate(projectileExplosion, transform.position, Quaternion.identity);
+       Sword_hitzone explosion = Instantiate(projectileExplosion, transform.position, transform.rotation); 
+       for (int i = 0; i < numBoost; i++) explosion.transform.localScale *= 1.5f;
+
        explosion.cible = klass.cible;
+       
    }
 
     // Start is called before the first frame update
