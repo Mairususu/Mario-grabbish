@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3319837460174947907}
   - component: {fileID: 5717293926522953795}
+  - component: {fileID: 8461028878882237511}
   - component: {fileID: 7151034261216899263}
   - component: {fileID: 2600988283971525096}
   - component: {fileID: 3485201525490074610}
@@ -90,6 +91,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8461028878882237511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2242719214616637776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ad1ad1813e1e84da74ff3422cfb1c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dash_duration: 0.15
+  dash_threshold: 25
+  direction: {x: 0, y: 0, z: 0}
+  dash_cooldown: 3
+  dashKey: 0
 --- !u!50 &7151034261216899263
 Rigidbody2D:
   serializedVersion: 4
@@ -130,12 +148,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7151034261216899263}
+  spriteRenderer: {fileID: 5717293926522953795}
+  hpSystem: {fileID: 0}
   numJoueur: 1
   moveSpeed: 5
   horizontalMovement: 0
   verticalMovement: 0
-  spriteRenderer: {fileID: 5717293926522953795}
-  hpSystem: {fileID: 0}
 --- !u!114 &3485201525490074610
 MonoBehaviour:
   m_ObjectHideFlags: 0

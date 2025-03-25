@@ -3,25 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerNumber
-{
-	Player1,
-	Player2
-}
+public enum PlayerNumber { Player1, Player2 }
 
-public class MoveScriptPlayer : MonoBehaviour
+public class MoveScriptPlayer : MonoBehaviour // svp plus jamais les mouvements des 2 joueurs en un script, worst idea T.T
 {
+
+	[SerializeField] Rigidbody2D rb;
+	[SerializeField] private SpriteRenderer spriteRenderer;
+	[SerializeField] private HPSystem hpSystem; 
+	
+	private Dash dash; 
 	public static MoveScriptPlayer instanceP1;
 	public static MoveScriptPlayer instanceP2;
 	
-	[SerializeField] Rigidbody2D rb;
     public PlayerNumber numJoueur;
 	public float moveSpeed;
 	public float horizontalMovement;
 	public float verticalMovement;
-	[SerializeField] private SpriteRenderer spriteRenderer;
 	private bool imune = false;
-	[SerializeField] private HPSystem hpSystem;
 	private Vector3 deplacement;
 	
 	public void ProjHit()
@@ -50,6 +49,10 @@ public class MoveScriptPlayer : MonoBehaviour
 
 	private void Awake()
 	{
+		dash  = GetComponent<Dash>();
+		if (numJoueur == PlayerNumber.Player1) dash.dashKey = KeyCode.Keypad0;
+		if (numJoueur == PlayerNumber.Player2) dash.dashKey = KeyCode.C;    
+		
 		if (numJoueur == PlayerNumber.Player1)
 		{
 			if (instanceP1 != null) Destroy(gameObject);
@@ -80,6 +83,7 @@ public class MoveScriptPlayer : MonoBehaviour
 		
 		if (horizontalMovement > 0) spriteRenderer.flipX = true;
 		else spriteRenderer.flipX = false;
-		
+		dash.direction = deplacement;
 	}
 }
+
