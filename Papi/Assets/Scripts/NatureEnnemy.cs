@@ -21,12 +21,12 @@ public class NatureEnnemy : ElementalEnnemies
                 Instantiate(ennemyNature, transform.position + new Vector3(1.0f, 1.0f, 1.0f), Quaternion.identity);
             } break;
             case PlayerProjectile.Element.Fire:
-                Source.clip=projectileSound[0];
+                Source.clip=projectileSound[1];
                 Source.Play();
                 health = 0  ;
                 break;
             case PlayerProjectile.Element.Nature :
-                Source.clip=projectileSound[0];
+                Source.clip=projectileSound[2];
                 Source.Play();
                 StartCoroutine(TakeHit(Color.red));
                 health -= 1; break;
