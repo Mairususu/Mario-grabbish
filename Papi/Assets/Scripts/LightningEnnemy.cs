@@ -9,6 +9,8 @@ public class LightningEnnemy : ElementalEnnemies
 {
     [SerializeField] private float dash_duration; // Haut pr que ca fasse un dash
     [SerializeField] private float dash_threshold;
+    [SerializeField] private AudioSource Source;
+    [SerializeField] private List<AudioClip> projectileSound;
     
     private float dash_speed;
 
@@ -26,16 +28,22 @@ public class LightningEnnemy : ElementalEnnemies
         {
             case PlayerProjectile.Element.Nature:
             {
+                Source.clip=projectileSound[0];
+                Source.Play();
                 health = 0;
             } break;
             case PlayerProjectile.Element.Fire:
             {
                 StartCoroutine(TakeHit(Color.red));
+                Source.clip=projectileSound[1];
+                Source.Play();
                 health -= 1  ;break;
             }
             case PlayerProjectile.Element.Lightning :
             {
                 StartCoroutine(TakeHit(Color.green));
+                Source.clip=projectileSound[2];
+                Source.Play();
                 health += 1;
                 StartCoroutine(dashCoroutine());
             }

@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
 public class NatureEnnemy : ElementalEnnemies
 {
     [SerializeField] private GameObject ennemyNature;
+    [SerializeField] private AudioSource Source;
+    [SerializeField] private List<AudioClip> projectileSound;
         
     private void get_touched_by(PlayerProjectile.Element elem)
     { 
@@ -12,13 +15,19 @@ public class NatureEnnemy : ElementalEnnemies
             case PlayerProjectile.Element.Water:
             {
                 StartCoroutine(TakeHit(Color.yellow));
+                Source.clip=projectileSound[0];
+                Source.Play();
                 health += 1  ;
                 Instantiate(ennemyNature, transform.position + new Vector3(1.0f, 1.0f, 1.0f), Quaternion.identity);
             } break;
             case PlayerProjectile.Element.Fire:
+                Source.clip=projectileSound[0];
+                Source.Play();
                 health = 0  ;
                 break;
             case PlayerProjectile.Element.Nature :
+                Source.clip=projectileSound[0];
+                Source.Play();
                 StartCoroutine(TakeHit(Color.red));
                 health -= 1; break;
         }
